@@ -39,4 +39,4 @@ vignettes/*.pdf
 .Renviron
 
 # Data Folder
-/Data
+/UCI HAR Dataset
