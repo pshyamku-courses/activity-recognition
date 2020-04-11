@@ -32,3 +32,19 @@ The following abbreviations are expanded to make the features more reader friend
 "-X" is expanded to "-Xaxis"
 "-Y" is expanded to "-Yaxis"
 "-Z" is expanded to "-Zaxis"
+
+# Specification of R used for development and verification of run_analysis.R
+platform       x86_64-apple-darwin15.6.0   
+arch           x86_64                      
+os             darwin15.6.0                
+system         x86_64, darwin15.6.0        
+status                                 
+major          3                           
+minor          6.2                         
+year           2019                        
+month          12                          
+day            12                          
+svn rev        77560                       
+language       R                           
+version.string R version 3.6.2 (2019-12-12)
+nickname       Dark and Stormy Night
