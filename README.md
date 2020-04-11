@@ -32,6 +32,7 @@ The following abbreviations are expanded to make the features more reader friend
 "-X" is expanded to "-Xaxis"
 "-Y" is expanded to "-Yaxis"
 "-Z" is expanded to "-Zaxis"
+"-std" is expanded to "-StandardDeviation"
 
 # Specification of R used for development and verification of run_analysis.R
 platform       x86_64-apple-darwin15.6.0   
