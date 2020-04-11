@@ -60,6 +60,7 @@ names(data_sd_mean_features_only) <- gsub("Mag", "Magnitude", names(data_sd_mean
 names(data_sd_mean_features_only) <- gsub("-X", "-Xaxis", names(data_sd_mean_features_only))
 names(data_sd_mean_features_only) <- gsub("-Y", "-Yaxis", names(data_sd_mean_features_only))
 names(data_sd_mean_features_only) <- gsub("-Z", "-Zaxis", names(data_sd_mean_features_only))
+names(data_sd_mean_features_only) <- gsub("-std", "-StandardDeviation", names(data_sd_mean_features_only))
 
 # 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 All_Data_grouped <- group_by(data_sd_mean_features_only, SubjectID, ActivityNames)
