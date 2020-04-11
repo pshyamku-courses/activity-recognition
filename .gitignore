@@ -40,3 +40,6 @@ vignettes/*.pdf
 
 # Data Folder
 /UCI HAR Dataset
+
+# output files
+tidy_dataset.txt
