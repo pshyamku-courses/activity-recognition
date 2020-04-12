@@ -6,6 +6,15 @@ Create tidy dataset from activity data from UCI dataset (http://archive.ics.uci.
 * Extracts only the measurements on the mean and standard deviation for each measurement.
 * Uses descriptive activity names to name the activities in the data set
 * Appropriately labels the data set with descriptive variable names. (as described below in renaming of the features)
+  * "Acc" is expanded to "Accelerometer"
+  * "Gyro" is expanded to "Gyroscope"
+  * "t" is expanded to "TimeDomain"
+  * "f" is expanded to "FrequencyDomain"
+  * "Mag" is expanded to "Magnitude"
+  * "-X" is expanded to "-Xaxis"
+  * "-Y" is expanded to "-Yaxis"
+  * "-Z" is expanded to "-Zaxis"
+  * "-std" is expanded to "-StandardDeviation"
 * From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 ## Inputs (UCI activity recognition dataset)
@@ -22,14 +31,3 @@ Note - This folder is included in gitignore so changes made to it will not be tr
 * Files created in the working directory
   * "tidy_dataset.txt" is the tidy and summarized version of the original data set. The included features are subject id, activity name and summary means of all the features that include mean or standard deviation of the observations.
 
-## Renaming of the features
-The following abbreviations are expanded to make the features more reader friendly
-* "Acc" is expanded to "Accelerometer"
-* "Gyro" is expanded to "Gyroscope"
-* "t" is expanded to "TimeDomain"
-* "f" is expanded to "FrequencyDomain"
-* "Mag" is expanded to "Magnitude"
-* "-X" is expanded to "-Xaxis"
-* "-Y" is expanded to "-Yaxis"
-* "-Z" is expanded to "-Zaxis"
-* "-std" is expanded to "-StandardDeviation"
