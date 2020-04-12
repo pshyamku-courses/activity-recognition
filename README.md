@@ -1,4 +1,4 @@
-# activity-recognition
+# Objectives and Scope of Activity Recognition Project
 Create tidy dataset from activity data from UCI dataset (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
 # The following actions are performed by the run_analysis.R script

@@ -2,7 +2,7 @@
 library(dplyr)
 
 ## Check if the required data folder exists in the working directory
-if (!dir.exists("UCI HAR Dataset")){
+if (!dir.exists("./UCI HAR Dataset")){
   download.file(url = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", 
                 method = "curl", destfile = "AccelerometerDataSet.zip")
   unzip(zipfile = "AccelerometerDataSet.zip")
@@ -38,7 +38,9 @@ All_data <- cbind(subject,data_tmp)
 # Assign reader friendly names for Subject ID and activity names
 names(All_data) <- c("SubjectID",as.character(features[,2]),"ActivityNames")
 
-## 2. Extracts only the measurements on the mean and standard deviation for each measurement.
+## 2. Extracts only the measurements on the mean and standard deviation for 
+## each measurement.
+
 # Find all the features that include mean or sd 
 feature_names_containing_mean <- features[grep("-mean\\(\\)",features[,2]),2]
 feature_names_containing_sd <- features[grep("-std\\(\\)",features[,2]),2]
@@ -51,7 +53,7 @@ data_sd_mean_features_only <- subset(All_data, select = c("SubjectID","ActivityN
 ## 3. Uses descriptive activity names to name the activities in the data set  
 data_sd_mean_features_only$ActivityNames <- activity_codes[data_sd_mean_features_only$ActivityNames,2]
 
-# 4. Appropriately labels the data set with descriptive variable names.
+## 4. Appropriately labels the data set with descriptive variable names.
 names(data_sd_mean_features_only) <- gsub("Acc", "Accelerometer", names(data_sd_mean_features_only))
 names(data_sd_mean_features_only) <- gsub("Gyro", "Gyroscope", names(data_sd_mean_features_only))
 names(data_sd_mean_features_only) <- gsub("^t", "TimeDomain", names(data_sd_mean_features_only))
@@ -62,7 +64,8 @@ names(data_sd_mean_features_only) <- gsub("-Y", "-Yaxis", names(data_sd_mean_fea
 names(data_sd_mean_features_only) <- gsub("-Z", "-Zaxis", names(data_sd_mean_features_only))
 names(data_sd_mean_features_only) <- gsub("-std", "-StandardDeviation", names(data_sd_mean_features_only))
 
-# 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+## 5. From the data set in step 4, creates a second, independent tidy data set 
+## with the average of each variable for each activity and each subject.
 All_Data_grouped <- group_by(data_sd_mean_features_only, SubjectID, ActivityNames)
 tidy_data <- summarise_each(All_Data_grouped, funs = mean)
 write.table(tidy_data, file = "tidy_dataset.txt", row.names = FALSE)
