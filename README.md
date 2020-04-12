@@ -20,7 +20,7 @@ Note - This folder is included in gitignore so changes made to it will not be tr
   * tidy_data - This data frame is the data frame written to 
 
 * Files created in the working directory
- * "tidy_dataset.txt" is the tidy and summarized version of the original data set. The included features are subject id, activity name and summary means of all the features that include mean or standard deviation of the observations.
+  * "tidy_dataset.txt" is the tidy and summarized version of the original data set. The included features are subject id, activity name and summary means of all the features that include mean or standard deviation of the observations.
 
 ## Renaming of the features
 The following abbreviations are expanded to make the features more reader friendly
